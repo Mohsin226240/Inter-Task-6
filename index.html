@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>My Blog — Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <a class="skip-link" href="#content">Skip to content</a>
+
+    <header class="site-header" role="banner">
+        <div class="container header-inner">
+            <a href="#top" class="logo" aria-label="Go to homepage">MyBlog<span class="dot">.</span></a>
+
+            <nav class="site-nav" aria-label="Primary">
+                <ul>
+                    <li><a href="#featured">Featured</a></li>
+                    <li><a href="#posts">Posts</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button id="themeToggle" class="icon-btn" aria-label="Toggle dark mode" title="Toggle dark mode">
+                    <span class="icon">🌙</span>
+                </button>
+
+                <button id="searchToggle" class="icon-btn" aria-expanded="false" aria-controls="headerSearch" aria-label="Toggle search" title="Search">
+                    <span class="icon">🔍</span>
+                </button>
+            </div>
+        </div>
+
+        <form id="headerSearch" class="header-search" role="search" aria-label="Site search" hidden>
+            <div class="container">
+                <input id="headerSearchInput" type="search" placeholder="Search posts..." aria-label="Search posts" />
+                <button type="button" id="headerSearchClear" class="btn btn-secondary">Clear</button>
+            </div>
+        </form>
+    </header>
+
+    <main id="content" class="site-main container" tabindex="-1">
+        <!-- Hero / Featured -->
+        <section id="featured" class="featured-section reveal" aria-labelledby="featured-heading">
+            <div class="featured-media">
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1600&auto=format&fit=crop" alt="Laptop on desk with code editor open" />
+            </div>
+            <div class="featured-content">
+                <h1 id="featured-heading">Build Better Web Experiences</h1>
+                <p class="excerpt">From design systems to performance tips, explore articles that help you craft delightful, accessible, and robust web apps.</p>
+                <a href="#posts" class="btn btn-primary">Read Latest Posts</a>
+            </div>
+        </section>
+
+        <div class="content-grid">
+            <!-- Posts -->
+            <section id="posts" class="posts-section" aria-labelledby="posts-heading">
+                <div class="section-header">
+                    <h2 id="posts-heading">Latest Posts</h2>
+                </div>
+
+                <div id="postsGrid" class="posts-grid">
+                    <!-- 6+ Post cards -->
+                    <article class="post-card reveal" data-category="design">
+                        <a class="thumb" href="#">
+                            <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=800&auto=format&fit=crop" alt="Design sketches on a desk" />
+                        </a>
+                        <div class="post-body">
+                            <div class="meta"><time datetime="2025-02-12">Feb 12, 2025</time> · Design</div>
+                            <h3 class="title"><a href="#">Crafting a Cohesive Design System</a></h3>
+                            <p class="excerpt">Guidelines for tokens, components, and documentation that scale with your product.</p>
+                            <a class="readmore" href="#">Read More →</a>
+                        </div>
+                    </article>
+
+                    <article class="post-card reveal" data-category="performance">
+                        <a class="thumb" href="#">
+                            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&auto=format&fit=crop" alt="Speedometer concept" />
+                        </a>
+                        <div class="post-body">
+                            <div class="meta"><time datetime="2025-02-05">Feb 5, 2025</time> · Performance</div>
+                            <h3 class="title"><a href="#">10 Quick Wins for Web Performance</a></h3>
+                            <p class="excerpt">From preloading critical assets to deferring non-essential scripts.</p>
+                            <a class="readmore" href="#">Read More →</a>
+                        </div>
+                    </article>
+
+                    <article class="post-card reveal" data-category="javascript">
+                        <a class="thumb" href="#">
+                            <img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=800&auto=format&fit=crop" alt="JavaScript code on screen" />
+                        </a>
+                        <div class="post-body">
+                            <div class="meta"><time datetime="2025-01-26">Jan 26, 2025</time> · JavaScript</div>
+                            <h3 class="title"><a href="#">Demystifying the Event Loop</a></h3>
+                            <p class="excerpt">Understand tasks, microtasks, and rendering in modern browsers.</p>
+                            <a class="readmore" href="#">Read More →</a>
+                        </div>
+                    </article>
+
+                    <article class="post-card reveal" data-category="css">
+                        <a class="thumb" href="#">
+                            <img src="https://images.unsplash.com/photo-1526378722484-bd91ca387e72?q=80&w=800&auto=format&fit=crop" alt="Abstract colorful gradient shapes" />
+                        </a>
+                        <div class="post-body">
+                            <div class="meta"><time datetime="2025-01-12">Jan 12, 2025</time> · CSS</div>
+                            <h3 class="title"><a href="#">Modern CSS Grid Layouts</a></h3>
+                            <p class="excerpt">Learn powerful patterns for complex, responsive layouts with minimal code.</p>
+                            <a class="readmore" href="#">Read More →</a>
+                        </div>
+                    </article>
+
+                    <article class="post-card reveal" data-category="accessibility">
+                        <a class="thumb" href="#">
+                            <img src="https://images.unsplash.com/photo-1587614382346-4ec70e388b28?q=80&w=800&auto=format&fit=crop" alt="Accessible web concept with keyboard" />
+                        </a>
+                        <div class="post-body">
+                            <div class="meta"><time datetime="2024-12-28">Dec 28, 2024</time> · Accessibility</div>
+                            <h3 class="title"><a href="#">Practical Accessibility Checks</a></h3>
+                            <p class="excerpt">A lightweight checklist to bake accessibility into your workflow.</p>
+                            <a class="readmore" href="#">Read More →</a>
+                        </div>
+                    </article>
+
+                    <article class="post-card reveal" data-category="javascript">
+                        <a class="thumb" href="#">
+                            <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981d?q=80&w=800&auto=format&fit=crop" alt="Laptop with code and coffee" />
+                        </a>
+                        <div class="post-body">
+                            <div class="meta"><time datetime="2024-12-10">Dec 10, 2024</time> · JavaScript</div>
+                            <h3 class="title"><a href="#">TypeScript Essentials for JS Devs</a></h3>
+                            <p class="excerpt">Types that boost confidence without slowing you down.</p>
+                            <a class="readmore" href="#">Read More →</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Sidebar -->
+            <aside class="sidebar" aria-label="Sidebar">
+                <div class="widget reveal">
+                    <h3 class="widget-title">Search</h3>
+                    <form id="sidebarSearch" role="search" aria-label="Search posts">
+                        <input id="sidebarSearchInput" type="search" placeholder="Search by title or excerpt" aria-label="Search" />
+                    </form>
+                </div>
+
+                <div class="widget reveal">
+                    <h3 class="widget-title">Categories</h3>
+                    <ul id="categoryList" class="category-list">
+                        <li><button class="chip is-active" data-filter="all">All</button></li>
+                        <li><button class="chip" data-filter="design">Design</button></li>
+                        <li><button class="chip" data-filter="performance">Performance</button></li>
+                        <li><button class="chip" data-filter="javascript">JavaScript</button></li>
+                        <li><button class="chip" data-filter="css">CSS</button></li>
+                        <li><button class="chip" data-filter="accessibility">Accessibility</button></li>
+                    </ul>
+                </div>
+
+                <div class="widget reveal">
+                    <h3 class="widget-title">Recent Posts</h3>
+                    <ul class="recent-posts">
+                        <li><a href="#">Crafting a Cohesive Design System</a></li>
+                        <li><a href="#">10 Quick Wins for Web Performance</a></li>
+                        <li><a href="#">Demystifying the Event Loop</a></li>
+                        <li><a href="#">Modern CSS Grid Layouts</a></li>
+                    </ul>
+                </div>
+
+                <div class="widget reveal">
+                    <h3 class="widget-title">Follow</h3>
+                    <div class="socials">
+                        <a href="#" aria-label="Twitter" class="social">𝕏</a>
+                        <a href="#" aria-label="GitHub" class="social">GH</a>
+                        <a href="#" aria-label="LinkedIn" class="social">in</a>
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+        <!-- About + Contact anchors for smooth scroll demo -->
+        <section id="about" class="info-section reveal" aria-labelledby="about-heading">
+            <h2 id="about-heading">About</h2>
+            <p>We write about product design, frontend engineering, and the craft of building user-centered web applications. Expect practical guides, patterns, and opinions.</p>
+        </section>
+
+        <section id="contact" class="info-section reveal" aria-labelledby="contact-heading">
+            <h2 id="contact-heading">Contact</h2>
+            <p>Have a topic in mind or feedback to share? Reach out on social or email hello@myblog.example.</p>
+        </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="container footer-grid">
+            <div>
+                <div class="logo footer-logo">MyBlog<span class="dot">.</span></div>
+                <p class="footnote">Insights on design and development. New posts weekly.</p>
+            </div>
+            <nav aria-label="Footer">
+                <h3 class="footer-title">Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#featured">Featured</a></li>
+                    <li><a href="#posts">Posts</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div>
+                <h3 class="footer-title">Connect</h3>
+                <div class="socials">
+                    <a href="#" aria-label="Twitter" class="social">𝕏</a>
+                    <a href="#" aria-label="GitHub" class="social">GH</a>
+                    <a href="#" aria-label="LinkedIn" class="social">in</a>
+                </div>
+            </div>
+        </div>
+        <div class="container copyright">
+            <small>© <span id="year"></span> MyBlog. All rights reserved.</small>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
+
+
+
